@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>풍세면 풍서리 타운하우스 23세대 분양</title>
+  <style>
+    /* 기본 스타일 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Noto Sans KR", sans-serif;
+      color: #111827;
+      background-color: #f3f4f6;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 컨테이너 공통 */
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* 헤더 / 네비게이션 */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(17, 24, 39, 0.9);
+      backdrop-filter: blur(8px);
+      color: white;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.06em;
+    }
+    .nav-menu {
+      display: flex;
+      gap: 20px;
+      font-size: 14px;
+    }
+    .nav-menu a {
+      opacity: 0.85;
+    }
+    .nav-menu a:hover {
+      opacity: 1;
+    }
+    .nav-cta {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(249, 250, 251, 0.5);
+      font-size: 13px;
+      cursor: pointer;
+      background: linear-gradient(to right, #f97316, #facc15);
+      color: #111827;
+      font-weight: 600;
+    }
+
+    /* 모바일 메뉴 간단 처리 */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+    }
+
+    /* 히어로 섹션 */
+    .hero {
+      position: relative;
+      padding: 72px 0 60px;
+      background: radial-gradient(circle at top left, #111827 0, #111827 40%, #1f2937 70%, #0f172a 100%);
+      color: white;
+      overflow: hidden;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 11px;
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .hero-sub {
+      font-size: 15px;
+      color: #e5e7eb;
+      margin-bottom: 24px;
+    }
+    .hero-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .hero-pill {
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .hero-btn-main {
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: linear-gradient(to right, #f97316, #facc15);
+      color: #111827;
+      font-weight: 700;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+    }
+    .hero-btn-sub {
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.9);
+      background: rgba(15, 23, 42, 0.7);
+      color: #e5e7eb;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .hero-right-card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 20px;
+      padding: 18px 18px 20px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+    .hero-right-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .hero-right-sub {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-bottom: 14px;
+    }
+    .hero-right-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      font-size: 11px;
+      margin-bottom: 16px;
+    }
+    .hero-right-item {
+      padding: 8px;
+      border-radius: 12px;
+      background: rgba(17, 24, 39, 0.9);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+    }
+    .hero-right-label {
+      color: #9ca3af;
+      font-size: 11px;
+      margin-bottom: 2px;
+    }
+    .hero-right-value {
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .hero-right-mini {
+      font-size: 11px;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+    .hero-right-contact {
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .hero-right-contact span {
+      color: #facc15;
+      font-weight: 700;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 640px) {
+      .hero {
+        padding: 60px 0 40px;
+      }
+      .hero-title {
+        font-size: 24px;
+      }
+      .hero-highlights {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 공통 섹션 */
+    section {
+      padding: 56px 0;
+    }
+    .section-header {
+      margin-bottom: 24px;
+    }
+    .section-kicker {
+      font-size: 11px;
+      font-weight: 600;
+      color: #6b7280;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .section-desc {
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    /* 사업개요 */
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e5e7eb;
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 20px;
+    }
+    .overview-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .overview-table th,
+    .overview-table td {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 8px 6px;
+      text-align: left;
+    }
+    .overview-table th {
+      width: 120px;
+      color: #6b7280;
+      font-weight: 500;
+      background: #f9fafb;
+    }
+    .map-placeholder {
+      border-radius: 16px;
+      background: linear-gradient(135deg, #d1d5db, #9ca3af);
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #111827;
+      font-size: 13px;
+      text-align: center;
+      padding: 0 12px;
+    }
+    .map-placeholder span {
+      font-weight: 600;
+    }
+    .map-tip {
+      font-size: 11px;
+      color: #6b7280;
+      margin-top: 6px;
+    }
+
+    @media (max-width: 900px) {
+      .overview-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 단지안내 */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 20px;
+    }
+    .plan-placeholder {
+      border-radius: 16px;
+      background: repeating-linear-gradient(
+        45deg,
+        #e5e7eb,
+        #e5e7eb 10px,
+        #d1d5db 10px,
+        #d1d5db 20px
+      );
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      text-align: center;
+      padding: 0 16px;
+      color: #374151;
+    }
+    .bullet-list {
+      font-size: 13px;
+      color: #4b5563;
+      padding-left: 16px;
+    }
+    .bullet-list li {
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 900px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 타입 안내 */
+    .type-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .type-card {
+      background: white;
+      border-radius: 18px;
+      padding: 16px;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .type-name {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .type-tag {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      margin-bottom: 4px;
+    }
+    .type-meta {
+      font-size: 12px;
+      color: #6b7280;
+    }
+    .type-highlight {
+      font-size: 12px;
+      color: #374151;
+    }
+    .type-plan {
+      margin-top: 6px;
+      padding: 10px;
+      border-radius: 12px;
+      background: #f9fafb;
+      border: 1px dashed #d1d5db;
+      font-size: 11px;
+      text-align: center;
+      color: #6b7280;
+    }
+
+    @media (max-width: 900px) {
+      .type-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 640px) {
+      .type-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 입지 환경 */
+    .chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .chip {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      color: #374151;
+    }
+
+    /* 프리미엄 */
+    .premium-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .premium-card {
+      background: #111827;
+      color: #e5e7eb;
+      border-radius: 18px;
+      padding: 14px 14px 16px;
+      border: 1px solid #374151;
+      font-size: 13px;
+    }
+    .premium-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .premium-sub {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    @media (max-width: 900px) {
+      .premium-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 640px) {
+      .premium-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 분양가 */
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .price-table th,
+    .price-table td {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 8px 6px;
+      text-align: left;
+    }
+    .price-table th {
+      background: #f9fafb;
+      font-weight: 600;
+      color: #4b5563;
+    }
+    .price-note {
+      font-size: 11px;
+      color: #6b7280;
+      margin-top: 6px;
+    }
+
+    /* 공사진행 / 갤러리 */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .gallery-item {
+      border-radius: 14px;
+      background: #e5e7eb;
+      height: 120px;
+      font-size: 12px;
+      color: #4b5563;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 6px;
+    }
+
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 640px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 문의 섹션 */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 20px;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 12px;
+    }
+    .form-field label {
+      color: #4b5563;
+    }
+    .form-field input,
+    .form-field textarea {
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      font-size: 13px;
+      outline: none;
+    }
+    .form-field input:focus,
+    .form-field textarea:focus {
+      border-color: #fb923c;
+      box-shadow: 0 0 0 1px rgba(251, 146, 60, 0.4);
+    }
+    .form-submit {
+      margin-top: 6px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      background: linear-gradient(to right, #f97316, #facc15);
+      color: #111827;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+    .contact-info-card {
+      background: #111827;
+      color: #e5e7eb;
+      border-radius: 18px;
+      padding: 16px;
+      border: 1px solid #374151;
+      font-size: 13px;
+    }
+    .contact-info-card h3 {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .contact-info-row {
+      margin-top: 8px;
+      font-size: 13px;
+    }
+    .contact-info-row span {
+      font-weight: 600;
+      color: #facc15;
+    }
+    .privacy {
+      font-size: 11px;
+      color: #6b7280;
+      margin-top: 6px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 푸터 */
+    footer {
+      padding: 18px 0 26px;
+      background: #111827;
+      color: #9ca3af;
+      font-size: 11px;
+    }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+    .footer-links {
+      display: flex;
+      gap: 10px;
+    }
+    .footer-links a {
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+  <!-- 헤더 -->
+  <header>
+    <div class="container nav">
+      <div class="nav-logo">풍세 풍서리 타운하우스 23세대</div>
+      <nav class="nav-menu">
+        <a href="#overview">사업개요</a>
+        <a href="#masterplan">단지안내</a>
+        <a href="#types">세대타입</a>
+        <a href="#location">입지환경</a>
+        <a href="#price">분양가</a>
+        <a href="#gallery">현장사진</a>
+        <a href="#contact">문의</a>
+      </nav>
+      <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        빠른 상담 신청
+      </button>
+    </div>
+  </header>
+
+  <!-- 히어로 섹션 -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <div class="hero-badge">
+          <span>대지조성공사 준공 완료</span>
+          <span>23세대 타운하우스 단지</span>
+        </div>
+        <h1 class="hero-title">
+          풍세면 풍서리<br />
+          23세대 단지형 타운하우스
+        </h1>
+        <p class="hero-sub">
+          천안시 동남구 풍세면 풍서리, 대지조성공사 준공 완료된 23세대 타운하우스 단지입니다.<br />
+          단지형 조경과 개별 마당, 쾌적한 전원 생활을 동시에 누리세요.
+        </p>
+        <div class="hero-highlights">
+          <div class="hero-pill">✅ 대지조성공사 준공 완료 · 즉시 건축 가능</div>
+          <div class="hero-pill">✅ 총 23세대 단지형 타운하우스</div>
+          <div class="hero-pill">✅ 남향 위주 배치 · 개별 마당 구성</div>
+          <div class="hero-pill">✅ 풍세·아산·천안 생활권 동시 확보</div>
+        </div>
+        <div class="hero-actions">
+          <button class="hero-btn-main" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+            분양 상담 신청하기
+          </button>
+          <button class="hero-btn-sub" onclick="document.getElementById('overview').scrollIntoView({behavior:'smooth'})">
+            사업개요 먼저 보기
+          </button>
+        </div>
+      </div>
+      <div class="hero-right-card">
+        <div class="hero-right-title">풍서리 23세대 분양정보 한눈에 보기</div>
+        <div class="hero-right-sub">※ 실제 분양가는 협의 후 확정 · 아래 내용은 예시 텍스트입니다.</div>
+        <div class="hero-right-grid">
+          <div class="hero-right-item">
+            <div class="hero-right-label">위치</div>
+            <div class="hero-right-value">충남 천안시 동남구<br />풍세면 풍서리 일원</div>
+          </div>
+          <div class="hero-right-item">
+            <div class="hero-right-label">규모</div>
+            <div class="hero-right-value">총 23세대<br />단지형 타운하우스</div>
+          </div>
+          <div class="hero-right-item">
+            <div class="hero-right-label">준공 상태</div>
+            <div class="hero-right-value">대지조성공사 준공 완료</div>
+          </div>
+          <div class="hero-right-item">
+            <div class="hero-right-label">용도</div>
+            <div class="hero-right-value">단독주택(타운하우스)</div>
+          </div>
+        </div>
+        <div class="hero-right-mini">
+          * 건축 설계 및 세대 타입, 분양가는 문의 시 상세 안내드립니다.
+        </div>
+        <div class="hero-right-contact">
+          상담문의 <span>000-0000-0000</span><br />
+          카카오톡 채널 검색 : <span>풍세 풍서리 타운하우스</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 사업개요 -->
+  <section id="overview">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">OVERVIEW</div>
+        <h2 class="section-title">사업개요</h2>
+        <p class="section-desc">
+          풍세면 풍서리 타운하우스 단지의 기본 사업 정보를 한눈에 확인하실 수 있습니다.
+        </p>
+      </div>
+
+      <div class="overview-grid">
+        <div class="card">
+          <table class="overview-table">
+            <tbody>
+              <tr>
+                <th>사업명</th>
+                <td>풍세면 풍서리 타운하우스 23세대</td>
+              </tr>
+              <tr>
+                <th>위치</th>
+                <td>충남 천안시 동남구 풍세면 풍서리 ○○번지 일원</td>
+              </tr>
+              <tr>
+                <th>대지 상태</th>
+                <td>대지조성공사 준공 완료</td>
+              </tr>
+              <tr>
+                <th>규모</th>
+                <td>총 23세대 단지형 타운하우스</td>
+              </tr>
+              <tr>
+                <th>용도지역</th>
+                <td>단독주택 가능 지역 (상세 내용은 개별 문의)</td>
+              </tr>
+              <tr>
+                <th>용도</th>
+                <td>단독주택(타운하우스)</td>
+              </tr>
+              <tr>
+                <th>시행/시공</th>
+                <td>시행 · 시공사 정보 입력 예정</td>
+              </tr>
+              <tr>
+                <th>진입도로</th>
+                <td>단지 진입도로 및 기반시설 조성 완료</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <div class="card">
+            <div class="map-placeholder">
+              <div>
+                <strong>지도/위치 이미지 영역</strong><br />
+                카카오맵 캡처 이미지를 넣어<br />
+                풍세면 풍서리 단지 위치를 표시해 주세요.
+              </div>
+            </div>
+            <div class="map-tip">
+              · 실제 개발 시, 카카오맵 정적 이미지 또는 캡처본을 삽입해 위치를 명확히 보여주세요.<br />
+              · 천안·아산 주요 거점까지 차량 소요 시간도 함께 표기하면 좋습니다.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 단지안내 -->
+  <section id="masterplan">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">MASTER PLAN</div>
+        <h2 class="section-title">단지안내</h2>
+        <p class="section-desc">
+          총 23세대 단지 배치, 동선, 조경 및 주차 계획 등 단지 전반에 대한 정보를 제공합니다.
+        </p>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <div class="plan-placeholder">
+            단지배치도 이미지 영역입니다.<br />
+            CAD에서 추출한 배치도(JPG)를 삽입하여<br />
+            23세대 동·호수, 진입도로, 주차장, 조경 등을 표시합니다.
+          </div>
+        </div>
+        <div class="card">
+          <ul class="bullet-list">
+            <li>· 총 23세대 단지형 타운하우스 배치</li>
+            <li>· 남향 위주 세대 배치로 일조 및 조망 극대화</li>
+            <li>· 세대별 개별 마당 및 주차 공간 확보(세대당 2대 이상 계획 가능)</li>
+            <li>· 단지 내 보행/차량 동선 분리 검토로 안전한 생활 환경</li>
+            <li>· 조경 계획을 통한 단지형 전원 마을 분위기 연출</li>
+            <li>· 단지 진입부 경관 및 출입 동선 계획으로 프리미엄 이미지 강화</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 세대 타입 안내 -->
+  <section id="types">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">UNIT PLAN</div>
+        <h2 class="section-title">세대 타입 안내</h2>
+        <p class="section-desc">
+          실제 평면도와 타입명은 확정 후 반영 가능합니다. 아래는 구성 예시입니다.
+        </p>
+      </div>
+
+      <div class="type-grid">
+        <!-- 타입 A -->
+        <div class="type-card">
+          <div class="type-tag">예시</div>
+          <div class="type-name">A 타입 · 2층 구조</div>
+          <div class="type-meta">전용 ○○㎡ / 대지지분 ○○㎡ / 방 3 · 욕실 2</div>
+          <div class="type-highlight">
+            · 1층 : 거실/주방/테라스<br />
+            · 2층 : 침실 3개, 욕실 1개<br />
+            · 남향 마당, 세대 앞 2대 주차
+          </div>
+          <div class="type-plan">
+            ▶ A타입 평면도 이미지 삽입<br />
+            (1층/2층 평면 JPG 또는 3D 렌더링)
+          </div>
+        </div>
+
+        <!-- 타입 B -->
+        <div class="type-card">
+          <div class="type-tag">예시</div>
+          <div class="type-name">B 타입 · 넓은 마당형</div>
+          <div class="type-meta">전용 ○○㎡ / 대지지분 ○○㎡ / 방 4 · 욕실 2</div>
+          <div class="type-highlight">
+            · 1층에 안방 배치, 실거주 최적화<br />
+            · LDK 일체형 구조로 개방감 극대화<br />
+            · 측면/후면 마당 활용도 우수
+          </div>
+          <div class="type-plan">
+            ▶ B타입 평면도 / 투시도 삽입
+          </div>
+        </div>
+
+        <!-- 타입 C -->
+        <div class="type-card">
+          <div class="type-tag">예시</div>
+          <div class="type-name">C 타입 · 코너세대</div>
+          <div class="type-meta">전용 ○○㎡ / 대지지분 ○○㎡ / 방 3 · 욕실 3</div>
+          <div class="type-highlight">
+            · 코너 배치로 2면 채광 우수<br />
+            · 세대별 프라이버시 강화<br />
+            · 테라스+마당 복합 구성
+          </div>
+          <div class="type-plan">
+            ▶ C타입 평면도 / 3D 조감도 삽입
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 입지환경 -->
+  <section id="location">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">LOCATION</div>
+        <h2 class="section-title">입지환경 및 생활권</h2>
+        <p class="section-desc">
+          풍세면 풍서리는 자연친화적인 전원 환경과 천안·아산 생활권 접근성을 동시에 갖춘 입지입니다.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="chips-row">
+          <div class="chip">풍세 · 천안 · 아산 생활권</div>
+          <div class="chip">태학산자연휴양림 인근</div>
+          <div class="chip">초/중학교 생활권</div>
+          <div class="chip">고속도로 IC 인접(차량 이동 편리)</div>
+        </div>
+        <p style="font-size:13px; color:#4b5563; margin-bottom:8px;">
+          · 조용한 전원 주거 환경과 도심 접근성을 모두 고려한 입지로,
+          실거주 및 세컨드 하우스로 모두 적합한 입지 조건을 갖추고 있습니다.
+        </p>
+        <p style="font-size:12px; color:#6b7280;">
+          ※ 실제 거리/시간 정보(예: 천안아산역, 천안 시내, 주요 편의시설까지 차량 ○분)는 향후 자료 조사 후 수치로 표기해 주시면
+          방문 고객 신뢰도가 크게 높아집니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 프리미엄 -->
+  <section id="premium">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">PREMIUM</div>
+        <h2 class="section-title">풍서리 타운하우스만의 프리미엄</h2>
+        <p class="section-desc">
+          대지조성공사 준공 완료 단지라는 점에서 출발부터 차별화된 가치를 제공합니다.
+        </p>
+      </div>
+
+      <div class="premium-grid">
+        <div class="premium-card">
+          <div class="premium-title">01. 대지조성공사 준공 완료</div>
+          <div class="premium-sub">
+            대지 조성공사 준공이 완료되어, 즉시 건축 진행이 가능하며
+            인허가 및 공정 지연 리스크를 줄였습니다.
+          </div>
+        </div>
+        <div class="premium-card">
+          <div class="premium-title">02. 23세대 단지형 구성</div>
+          <div class="premium-sub">
+            소규모 단독주택이 아닌 23세대 단지형 구성으로,
+            조경·관리·이미지 면에서 프리미엄 타운하우스 단지를 지향합니다.
+          </div>
+        </div>
+        <div class="premium-card">
+          <div class="premium-title">03. 개별 마당 · 주차공간</div>
+          <div class="premium-sub">
+            세대별 마당 활용이 가능하며, 세대당 2대 이상의 주차공간 확보가 가능하도록
+            계획할 수 있는 구조입니다.
+          </div>
+        </div>
+        <div class="premium-card">
+          <div class="premium-title">04. 남향 위주 배치</div>
+          <div class="premium-sub">
+            남향 위주 세대 배치를 통해 일조와 채광, 조망을 극대화하여
+            쾌적한 주거환경을 제공합니다.
+          </div>
+        </div>
+        <div class="premium-card">
+          <div class="premium-title">05. 자연친화 입지</div>
+          <div class="premium-sub">
+            풍세면 자연환경과 연계한 전원형 생활이 가능하며,
+            도심과의 적절한 거리로 실거주 만족도를 높입니다.
+          </div>
+        </div>
+        <div class="premium-card">
+          <div class="premium-title">06. 맞춤 설계 가능(예정)</div>
+          <div class="premium-sub">
+            건축 단계에서 수요자 맞춤형 설계(평면·마감 등)가 가능하도록
+            협의 구조를 마련할 수 있습니다. (상세 내용은 문의)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 분양가 -->
+  <section id="price">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">PRICE</div>
+        <h2 class="section-title">분양가 및 금융 안내</h2>
+        <p class="section-desc">
+          실제 분양가 엑셀 자료가 나오면 아래 표에 그대로 반영하면 됩니다. 지금은 구조만 예시로 구성했습니다.
+        </p>
+      </div>
+
+      <div class="card">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>타입</th>
+              <th>대지면적(㎡)</th>
+              <th>건축면적/연면적(㎡)</th>
+              <th>세대수</th>
+              <th>분양가(원)</th>
+              <th>비고</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A 타입</td>
+              <td>추후 입력</td>
+              <td>추후 입력</td>
+              <td>예: ○세대</td>
+              <td>협의 후 공개</td>
+              <td>기본형</td>
+            </tr>
+            <tr>
+              <td>B 타입</td>
+              <td>추후 입력</td>
+              <td>추후 입력</td>
+              <td>예: ○세대</td>
+              <td>협의 후 공개</td>
+              <td>넓은 마당형</td>
+            </tr>
+            <tr>
+              <td>C 타입</td>
+              <td>추후 입력</td>
+              <td>추후 입력</td>
+              <td>예: ○세대</td>
+              <td>협의 후 공개</td>
+              <td>코너세대</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="price-note">
+          · 중도금 대출, 잔금 대출, 이자후불제 등 금융 조건은 협의 후 상세 안내드립니다.<br />
+          · 실제 분양가 및 금융 조건은 시행사 사정에 따라 변동될 수 있습니다.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 공사진행/갤러리 -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">GALLERY</div>
+        <h2 class="section-title">현장사진 · 공사진행 현황</h2>
+        <p class="section-desc">
+          대지조성공사 준공 현장 및 향후 세대 건축 진행 사진을 주기적으로 업데이트할 수 있는 영역입니다.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="gallery-grid">
+          <div class="gallery-item">대지조성공사 준공 현장 사진 1</div>
+          <div class="gallery-item">대지조성공사 준공 현장 사진 2</div>
+          <div class="gallery-item">단지 진입도로 사진</div>
+          <div class="gallery-item">향후 세대 골조 공사 사진</div>
+          <div class="gallery-item">조경 계획 이미지/조감도</div>
+          <div class="gallery-item">야간 조명 이미지(예정)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 문의 -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">CONTACT</div>
+        <h2 class="section-title">분양 문의 및 상담 신청</h2>
+        <p class="section-desc">
+          연락처를 남겨주시면 담당자가 순차적으로 연락드려 상세한 분양 안내를 도와드립니다.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card">
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('실제 운영 시에는 서버 연동이 필요합니다.');">
+            <div class="form-field">
+              <label for="name">성함</label>
+              <input id="name" type="text" placeholder="이름을 입력해 주세요." />
+            </div>
+            <div class="form-field">
+              <label for="phone">연락처</label>
+              <input id="phone" type="tel" placeholder="연락 가능한 휴대폰 번호를 입력해 주세요." />
+            </div>
+            <div class="form-field">
+              <label for="msg">문의 내용</label>
+              <textarea id="msg" rows="4" placeholder="관심 타입, 예산, 방문 가능 일정 등을 남겨주시면 보다 정확한 상담이 가능합니다."></textarea>
+            </div>
+            <button type="submit" class="form-submit">상담 신청하기</button>
+            <div class="privacy">
+              ※ 입력하신 개인정보는 분양 상담 및 안내 목적 외에 사용되지 않으며, 상담 종료 후 관련 법령에 따라 안전하게 보관·파기됩니다.
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-info-card">
+          <h3>직통 상담 및 방문 안내</h3>
+          <div class="contact-info-row">
+            분양 상담전화 : <span>000-0000-0000</span>
+          </div>
+          <div class="contact-info-row">
+            카카오톡 채널 : <span>풍세 풍서리 타운하우스</span>
+          </div>
+          <div class="contact-info-row">
+            현장 주소 : 충남 천안시 동남구 풍세면 풍서리 ○○번지 일원
+          </div>
+          <p style="margin-top:10px; font-size:12px; color:#d1d5db;">
+            내비게이션 검색은 “풍세면 풍서리 ○○○-○” 또는 담당자 안내에 따라 입력해 주세요.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-logo">풍세면 풍서리 타운하우스 23세대</div>
+        <div class="footer-links">
+          <a href="#overview">사업개요</a>
+          <a href="#contact">문의</a>
+        </div>
+      </div>
+      <div>
+        (가칭) 풍세 풍서리 타운하우스 분양 홍보용 홈페이지 시안입니다. 실제 분양 조건 및 사업 내용은
+        시행/시공사의 최종 확정 내용과 분양 공고를 기준으로 합니다.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
