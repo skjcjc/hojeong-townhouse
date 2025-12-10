@@ -294,18 +294,26 @@ box-shadow:
       font-weight: 500;
       background: #f9fafb;
     }
-    .map-placeholder {
-      border-radius: 16px;
-      background: linear-gradient(135deg, #d1d5db, #9ca3af);
-      height: 220px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #111827;
-      font-size: 13px;
-      text-align: center;
-      padding: 0 12px;
-    }
+   map-placeholder {
+    border-radius: 16px;
+    background: #d1d5db; /* 기존 배경색 유지 또는 단순화 */
+    overflow: hidden;
+    width: 100%;
+    height: auto; /* 이미지 비율에 따라 높이 자동 조정 */
+    padding: 0; /* 내부 여백 제거 */
+}
+
+.map-placeholder img {
+    width: 100%;
+    height: auto; /* 이미지 비율 유지 */
+    object-fit: contain; /* 이미지가 잘리지 않고 전체 보이도록 함 */
+    display: block;
+}
+
+/* 지도 카드가 일반 카드와 달리 여백이 없도록 강제 적용 */
+.overview-grid .card:last-child {
+  padding: 0 !important; 
+}
     .map-placeholder span {
       font-weight: 600;
     }
@@ -1125,6 +1133,7 @@ box-shadow:
   </footer>
 </body>
 </html>
+
 
 
 
