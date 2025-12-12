@@ -4,12 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>풍세면 풍서리 타운하우스 23세대 분양</title>
+
   <style>
     /* 기본 스타일 */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
-      color: #111827; background-color: #f3f4f6; line-height: 1.6;
+      color: #111827;
+      background-color: #f3f4f6;
+      line-height: 1.6;
     }
     a { text-decoration: none; color: inherit; }
 
@@ -39,14 +42,22 @@
 
     /* 히어로 섹션 */
     .hero {
-      position: relative; padding: 72px 0 60px;
+      position: relative;
+      padding: 72px 0 60px;
       background: radial-gradient(circle at top left, #111827 0, #111827 40%, #1f2937 70%, #0f172a 100%);
-      color: white; overflow: hidden;
+      color: white;
+      overflow: hidden;
     }
-    .hero-inner { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: center; }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
-      padding: 8px 18px; border-radius: 14px;
+      padding: 8px 18px;
+      border-radius: 14px;
       background: rgba(255,255,255,0.12);
       backdrop-filter: blur(10px);
       border: 1.2px solid rgba(255, 255, 255, 0.25);
@@ -57,24 +68,37 @@
     .hero-badge span { font-size: 15px; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.35); }
     .hero-title { font-size: 32px; font-weight: 800; margin-bottom: 12px; }
     .hero-sub { font-size: 15px; color: #e5e7eb; margin-bottom: 24px; }
-    .hero-highlights { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-bottom: 24px; }
+    .hero-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px; margin-bottom: 24px;
+    }
     .hero-pill {
-      padding: 8px 10px; border-radius: 999px;
+      padding: 8px 10px;
+      border-radius: 999px;
       background: rgba(15, 23, 42, 0.9);
       border: 1px solid rgba(55, 65, 81, 0.9);
-      font-size: 12px; display: flex; align-items: center; gap: 8px;
+      font-size: 12px;
+      display: flex; align-items: center; gap: 8px;
     }
-
     .hero-right-card {
       background: rgba(15, 23, 42, 0.9);
-      border-radius: 20px; padding: 18px 18px 20px;
+      border-radius: 20px;
+      padding: 18px 18px 20px;
       border: 1px solid rgba(55, 65, 81, 0.9);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     }
     .hero-right-title { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
-    .hero-right-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; font-size: 11px; margin-bottom: 16px; }
+    .hero-right-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      font-size: 11px;
+      margin-bottom: 16px;
+    }
     .hero-right-item {
-      padding: 8px; border-radius: 12px;
+      padding: 8px;
+      border-radius: 12px;
       background: rgba(17, 24, 39, 0.9);
       border: 1px solid rgba(55, 65, 81, 0.9);
     }
@@ -101,7 +125,9 @@
 
     /* 카드 */
     .card {
-      background: white; border-radius: 18px; padding: 20px;
+      background: white;
+      border-radius: 18px;
+      padding: 20px;
       box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
       border: 1px solid #e5e7eb;
     }
@@ -110,11 +136,11 @@
     .overview-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; }
     .overview-table { width: 100%; border-collapse: collapse; font-size: 13px; }
     .overview-table th, .overview-table td {
-      border-bottom: 1px solid #e5e7eb; padding: 8px 6px; text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 8px 6px;
+      text-align: left;
     }
-    .overview-table th {
-      width: 120px; color: #6b7280; font-weight: 500; background: #f9fafb;
-    }
+    .overview-table th { width: 120px; color: #6b7280; font-weight: 500; background: #f9fafb; }
     @media (max-width: 900px) { .overview-grid { grid-template-columns: 1fr; } }
 
     /* 단지안내 */
@@ -123,8 +149,7 @@
     .bullet-list li { margin-bottom: 6px; }
     @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } }
 
-    /* 타입 안내 */
-    .type-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    /* 타입(건축이미지) */
     @media (max-width: 900px) { .type-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     @media (max-width: 640px) { .type-grid { grid-template-columns: 1fr; } }
 
@@ -151,51 +176,78 @@
     .footer-links { display: flex; gap: 10px; }
     .footer-links a { color: #9ca3af; }
 
-    /* ====== 광역지도 확대 보기(요청 기능) ====== */
-    .zoom-hint{
-      font-size:12px;
-      color:#6b7280;
-      padding:10px 12px;
-      background:#f9fafb;
-      border-top:1px solid #e5e7eb;
+    /* ===========================
+       [추가] 입지환경 2개 이미지 확대(광역도처럼)
+       =========================== */
+    .location-zoom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    @media (max-width: 900px) {
+      .location-zoom-grid { grid-template-columns: 1fr; }
+    }
+    .zoom-box {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      background: #fff;
+    }
+    .zoom-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      cursor: zoom-in;
+    }
+    .zoom-hint {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      background: rgba(17, 24, 39, 0.75);
+      color: #fff;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      pointer-events: none;
     }
 
-    .zoom-modal{
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,0.75);
-      z-index:999999;
-      display:none;
-      align-items:center;
-      justify-content:center;
-      padding:24px;
+    /* 모달 */
+    .zoom-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100000;
     }
-    .zoom-modal.is-open{ display:flex; }
-
-    .zoom-modal-inner{
-      position:relative;
-      width:min(1100px, 96vw);
-      max-height:90vh;
+    .zoom-modal[aria-hidden="false"] { display: flex; }
+    .zoom-modal-inner {
+      position: relative;
+      max-width: 92vw;
+      max-height: 92vh;
     }
-    .zoom-modal img{
-      width:100%;
-      height:auto;
-      max-height:90vh;
-      object-fit:contain;
-      border-radius:12px;
-      background:#111;
-      display:block;
+    .zoom-modal-inner img {
+      width: auto;
+      height: auto;
+      max-width: 92vw;
+      max-height: 92vh;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
-    .zoom-close{
-      position:absolute;
-      top:-44px;
-      right:0;
-      border:0;
-      background:transparent;
-      color:#fff;
-      font-size:34px;
-      cursor:pointer;
-      line-height:1;
+    .zoom-close {
+      position: absolute;
+      top: -44px;
+      right: 0;
+      font-size: 34px;
+      color: #fff;
+      background: none;
+      border: none;
+      cursor: pointer;
+      line-height: 1;
     }
   </style>
 </head>
@@ -214,7 +266,7 @@
       </nav>
 
       <div style="display: flex; align-items: center; gap: 8px; margin-left: 50px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#facc15" style="display: block;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#facc15" style="display:block;">
           <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.44-5.15-3.75-6.59-6.59l1.97-1.57c.22-.22.3-.53.24-1.01a11.36 11.36 0 0 1-.56-3.53C8.96 3.28 8.24 2.5 7.31 2.5H4.07C3.06 2.5 2 3.56 2 4.93c0 9.77 7.73 17.5 17.5 17.5 1.37 0 2.43-1.06 2.43-2.07v-3.24c0-.93-.78-1.65-1.92-1.74z"/>
         </svg>
         <span style="font-size: 20px; font-weight: 800; color: white;">0000-0000</span>
@@ -260,14 +312,13 @@
             <div class="hero-right-value">단독주택(타운하우스)</div>
           </div>
         </div>
-
         <div class="hero-right-mini">* 건축 설계 및 세대 타입, 분양가는 문의 시 상세 안내드립니다.</div>
 
-        <div class="hero-right-contact" style="display: flex; align-items: center; gap: 12px; margin-top: 15px;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#facc15" style="display: block;">
+        <div class="hero-right-contact" style="display:flex; align-items:center; gap:12px; margin-top:15px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#facc15" style="display:block;">
             <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.44-5.15-3.75-6.59-6.59l1.97-1.57c.22-.22.3-.53.24-1.01a11.36 11.36 0 0 1-.56-3.53C8.96 3.28 8.24 2.5 7.31 2.5H4.07C3.06 2.5 2 3.56 2 4.93c0 9.77 7.73 17.5 17.5 17.5 1.37 0 2.43-1.06 2.43-2.07v-3.24c0-.93-.78-1.65-1.92-1.74z"/>
           </svg>
-          <span style="font-size: 26px; font-weight: 800; color: white; letter-spacing: -0.5px; line-height: 1;">0000-0000</span>
+          <span style="font-size:26px; font-weight:800; color:white; letter-spacing:-0.5px; line-height:1;">0000-0000</span>
         </div>
       </div>
     </div>
@@ -297,19 +348,10 @@
         </div>
 
         <div>
-          <div class="card" style="padding: 0 !important; overflow: hidden; border: 1px solid #e5e7eb; height: 100%;">
-            <!-- 광역지도(클릭/더블클릭 확대) -->
-            <img
-              src="./광역지도.jpg"
-              alt="풍세 호정마을 위치 지도"
-              class="zoomable"
-              data-zoom-src="./광역지도.jpg"
-              style="width: 100%; height: 100%; display: block; object-fit: cover; cursor: zoom-in;"
-            />
-            <div class="zoom-hint">더블 클릭(또는 클릭)하여 크게 보기</div>
+          <div class="card" style="padding:0 !important; overflow:hidden; border:1px solid #e5e7eb; height:100%;">
+            <img src="./광역지도.jpg" alt="풍세 호정마을 위치 지도" style="width:100%; height:100%; display:block; object-fit:cover;">
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -337,14 +379,14 @@
           </ul>
         </div>
 
-        <div class="card" style="padding: 0 !important; overflow: hidden; height: 100%; border: 1px solid #e5e7eb;">
-          <img src="./조감도.jpg" alt="단지 조감도" style="width: 100%; height: 100%; display: block; object-fit: cover;">
+        <div class="card" style="padding:0 !important; overflow:hidden; height:100%; border:1px solid #e5e7eb;">
+          <img src="./조감도.jpg" alt="단지 조감도" style="width:100%; height:100%; display:block; object-fit:cover;">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 건축 이미지 -->
+  <!-- 건축이미지 -->
   <section id="types">
     <div class="container">
       <div class="section-header">
@@ -353,12 +395,13 @@
         <p class="section-desc">실제 평면도와 타입명은 확정 후 반영 가능합니다. 아래는 구성 예시입니다.</p>
       </div>
 
-      <div class="type-grid" style="display: flex; gap: 20px;">
-        <div class="card" style="padding: 0 !important; overflow: hidden; border: 1px solid #e5e7eb; flex: 1; display: flex;">
-          <img src="./건축이미지1.png" alt="건축 이미지 1" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      <div class="type-grid" style="display:flex; gap:20px;">
+        <div class="card" style="padding:0 !important; overflow:hidden; border:1px solid #e5e7eb; flex:1; display:flex;">
+          <img src="./건축이미지1.png" alt="건축 이미지 1" style="width:100%; height:100%; object-fit:cover; display:block;">
         </div>
-        <div class="card" style="padding: 0 !important; overflow: hidden; border: 1px solid #e5e7eb; flex: 1; display: flex;">
-          <img src="./건축이미지2.png" alt="건축 이미지 2" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+
+        <div class="card" style="padding:0 !important; overflow:hidden; border:1px solid #e5e7eb; flex:1; display:flex;">
+          <img src="./건축이미지2.png" alt="건축 이미지 2" style="width:100%; height:100%; object-fit:cover; display:block;">
         </div>
       </div>
     </div>
@@ -382,15 +425,30 @@
         </div>
 
         <p style="font-size:13px; color:#4b5563; margin-bottom:8px;">
-          · 조용한 전원 주거 환경과 도심 접근성을 모두 고려한 입지로, 실거주 및 세컨드 하우스로 모두 적합한 입지 조건을 갖추고 있습니다.
+          · 조용한 전원 주거 환경과 도심 접근성을 모두 고려한 입지로,
+          실거주 및 세컨드 하우스로 모두 적합한 입지 조건을 갖추고 있습니다.
         </p>
 
-        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-          <div style="flex: 1; min-width: 280px; border-radius: 12px; overflow: hidden; border: 1px solid #e5e7eb;">
-            <img src="./주변환경.jpg" alt="주변환경" style="width: 100%; height: auto; display: block;">
+        <!-- [수정] 이미지 2개를 각각 확대 가능하게 -->
+        <div class="location-zoom-grid">
+          <div class="zoom-box">
+            <img
+              src="./주변환경.jpg"
+              alt="주변환경"
+              class="zoomable"
+              data-zoom-src="./주변환경.jpg"
+            />
+            <div class="zoom-hint">🔍 크게 보기 (더블클릭)</div>
           </div>
-          <div style="flex: 1; min-width: 280px; border-radius: 12px; overflow: hidden; border: 1px solid #e5e7eb;">
-            <img src="./교통.jpg" alt="교통 환경" style="width: 100%; height: auto; display: block;">
+
+          <div class="zoom-box">
+            <img
+              src="./교통.jpg"
+              alt="교통 환경"
+              class="zoomable"
+              data-zoom-src="./교통.jpg"
+            />
+            <div class="zoom-hint">🔍 크게 보기 (더블클릭)</div>
           </div>
         </div>
       </div>
@@ -439,29 +497,30 @@
           </iframe>
         </div>
 
-        <div class="card" style="display: flex; flex-direction: column; justify-content: center; gap: 20px;">
+        <div class="card" style="display:flex; flex-direction:column; justify-content:center; gap:20px;">
           <div>
-            <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center;">
-              <span style="width: 6px; height: 6px; background: #fbbf24; border-radius: 50%; display: inline-block; margin-right: 8px;"></span>
+            <h3 style="font-size:16px; font-weight:700; margin-bottom:12px; display:flex; align-items:center;">
+              <span style="width:6px; height:6px; background:#fbbf24; border-radius:50%; display:inline-block; margin-right:8px;"></span>
               현장 위치
             </h3>
-            <p style="font-size: 15px; color: #374151; margin-bottom: 20px; padding-left: 14px; font-weight: 500;">
+            <p style="font-size:15px; color:#374151; margin-bottom:20px; padding-left:14px; font-weight:500;">
               충남 천안시 동남구 풍세면 풍서리 698번지 일원
             </p>
 
-            <div style="display: flex; flex-direction: column; gap: 10px; padding-left: 14px;">
-              <a href="https://map.naver.com/v5/search/충남%20천안시%20동남구%20풍세면%20풍서리%20698" target="_blank"
-                 style="width: 100%; background: #03C75A; color: white; text-align: center; padding: 14px 0; border-radius: 8px; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none;">
+            <div style="display:flex; flex-direction:column; gap:10px; padding-left:14px;">
+              <a href="https://map.naver.com/v5/search/충남%20천안시%20동남구%20풍세면%20풍서리%20698"
+                 target="_blank"
+                 style="width:100%; background:#03C75A; color:white; text-align:center; padding:14px 0; border-radius:8px; font-size:14px; font-weight:600; display:flex; align-items:center; justify-content:center; gap:6px; text-decoration:none;">
                 N 네이버맵
               </a>
-              <a href="https://map.kakao.com/link/search/충남%20천안시%20동남구%20풍세면%20풍서리%20698" target="_blank"
-                 style="width: 100%; background: #FEE500; color: #191919; text-align: center; padding: 14px 0; border-radius: 8px; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none;">
+              <a href="https://map.kakao.com/link/search/충남%20천안시%20동남구%20풍세면%20풍서리%20698"
+                 target="_blank"
+                 style="width:100%; background:#FEE500; color:#191919; text-align:center; padding:14px 0; border-radius:8px; font-size:14px; font-weight:600; display:flex; align-items:center; justify-content:center; gap:6px; text-decoration:none;">
                 📍 카카오맵
               </a>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -473,7 +532,7 @@
         <div class="footer-logo">풍세면 풍서리 타운하우스 23세대</div>
         <div class="footer-links">
           <a href="#overview">사업개요</a>
-          <a href="#visit">오시는 길</a>
+          <a href="#contact">문의</a>
         </div>
       </div>
       <div>
@@ -484,17 +543,18 @@
   </footer>
 
   <!-- 기존 팝업 -->
-  <div id="mainPopup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 99999; display: flex; align-items: center; justify-content: center;">
-    <div style="position: relative; width: 100%; max-width: 450px;">
+  <div id="mainPopup" style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:99999; display:flex; align-items:center; justify-content:center;">
+    <div style="position:relative; width:100%; max-width:450px;">
       <button onclick="document.getElementById('mainPopup').style.display='none'"
-              style="position: absolute; top: -30px; right: 0; background: none; border: none; color: white; font-size: 30px; cursor: pointer;">
+              style="position:absolute; top:-30px; right:0; background:none; border:none; color:white; font-size:30px; cursor:pointer;">
         &times;
       </button>
-      <img src="./팝업창.png" alt="분양 홍보 팝업" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); display: block;">
+      <img src="./팝업창.png" alt="분양 홍보 팝업"
+           style="width:100%; height:auto; border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,0.5); display:block;">
     </div>
   </div>
 
-  <!-- 광역지도 확대 모달 -->
+  <!-- [추가] 이미지 확대 모달 -->
   <div id="zoomModal" class="zoom-modal" aria-hidden="true">
     <div class="zoom-modal-inner">
       <button class="zoom-close" type="button" aria-label="닫기">&times;</button>
@@ -502,68 +562,46 @@
     </div>
   </div>
 
+  <!-- [추가] 확대 JS -->
   <script>
     (function () {
       const modal = document.getElementById('zoomModal');
       const modalImg = document.getElementById('zoomModalImg');
-      const closeBtn = modal.querySelector('.zoom-close');
-      let isOpen = false;
+      const closeBtn = document.querySelector('.zoom-close');
 
-      function openZoom(src, altText) {
+      function openZoom(src, alt) {
         modalImg.src = src;
-        modalImg.alt = altText || '확대 이미지';
-        modal.classList.add('is-open');
+        modalImg.alt = alt || '';
         modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-        isOpen = true;
       }
 
       function closeZoom() {
-        modal.classList.remove('is-open');
         modal.setAttribute('aria-hidden', 'true');
         modalImg.src = '';
-        document.body.style.overflow = '';
-        isOpen = false;
       }
 
-      // 광역지도(zoomable) 클릭/더블클릭
-      document.querySelectorAll('.zoomable').forEach(img => {
-        const src = img.getAttribute('data-zoom-src') || img.src;
-        const alt = img.getAttribute('alt') || '';
-        // 클릭: 열기
-        img.addEventListener('click', () => openZoom(src, alt));
-        // 더블클릭: 열기/닫기 토글
-        img.addEventListener('dblclick', (e) => {
-          e.preventDefault();
-          if (isOpen) closeZoom();
-          else openZoom(src, alt);
-        });
+      // PC 기준: 더블클릭하면 확대
+      document.addEventListener('dblclick', function (e) {
+        const img = e.target.closest('.zoomable');
+        if (!img) return;
+        openZoom(img.dataset.zoomSrc || img.src, img.alt);
       });
+
+      // 모달에서 더블클릭하면 닫힘
+      modal.addEventListener('dblclick', closeZoom);
 
       // 닫기 버튼
       closeBtn.addEventListener('click', closeZoom);
 
-      // 배경 클릭 시 닫기 (이미지/컨텐츠 클릭은 제외)
-      modal.addEventListener('click', (e) => {
+      // 배경 클릭 닫기(이미지/버튼 제외)
+      modal.addEventListener('click', function(e){
         if (e.target === modal) closeZoom();
-      });
-
-      // ESC 닫기
-      window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && isOpen) closeZoom();
-      });
-
-      // 모달 안 이미지 더블클릭 시 닫기(축소)
-      modalImg.addEventListener('dblclick', (e) => {
-        e.preventDefault();
-        closeZoom();
       });
     })();
   </script>
+
 </body>
 </html>
-
-
 
 
 
