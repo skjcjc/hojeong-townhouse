@@ -1003,50 +1003,13 @@ box-shadow:
   </div>
 </div>
 </body>
-  <!-- 광역지도 확대 모달 -->
-<div class="img-zoom-overlay" id="imgZoomOverlay">
-  <div class="img-zoom-modal">
-    <div class="img-zoom-close" id="closeImgZoom" aria-label="닫기">&times;</div>
-    <img id="imgZoomTarget" src="./광역지도.jpg" alt="광역지도 크게보기">
-    <div class="img-zoom-hint">더블클릭 또는 ESC로 닫기</div>
-  </div>
-</div>
-
-<script>
-  (function(){
-    const img = document.getElementById('wideMapImg');
-    const badge = document.getElementById('openMapZoom');
-    const overlay = document.getElementById('imgZoomOverlay');
-    const closeBtn = document.getElementById('closeImgZoom');
-    const zoomImg = document.getElementById('imgZoomTarget');
-
-    function openZoom(){
-      // 원본 src를 그대로 모달에 반영 (나중에 다른 이미지에도 재사용 가능)
-      zoomImg.src = img.getAttribute('src');
-      overlay.classList.add('is-open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeZoom(){
-      overlay.classList.remove('is-open');
-      document.body.style.overflow = '';
-    }
-
-    // 클릭/더블클릭 모두 지원
-    img.addEventListener('dblclick', openZoom);
-    img.addEventListener('click', openZoom);
-    badge.addEventListener('click', openZoom);
-
-    // 모달 닫기 (더블클릭/버튼/바깥영역/ESC)
-    zoomImg.addEventListener('dblclick', closeZoom);
-    closeBtn.addEventListener('click', closeZoom);
-    overlay.addEventListener('click', (e) => { if(e.target === overlay) closeZoom(); });
-    window.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeZoom(); });
-  })();
+ 
 </script>
 
 </html>
 
 2025.12.12
+
 
 
 
