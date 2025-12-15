@@ -153,8 +153,9 @@
 /* 왼쪽 텍스트 카드 세로 가운데 정렬용 */
 .masterplan-text{
   display: flex;
-  align-items: center;       /* 가로 기준 정렬 */
+  flex-direction: column;    /* 리스트 구조 유지 */
   justify-content: center;   /* 세로 가운데 (핵심) */
+  align-items: flex-start;   /* 가로 왼쪽 정렬 유지 */
 }
 
 .bullet-list { 
@@ -607,6 +608,7 @@
 
 </body>
 </html>
+
 
 
 
