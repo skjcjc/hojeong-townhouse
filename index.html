@@ -143,27 +143,35 @@
     .overview-table th { width: 120px; color: #6b7280; font-weight: 500; background: #f9fafb; }
     @media (max-width: 900px) { .overview-grid { grid-template-columns: 1fr; } }
 
-  /* 단지안내 */
+/* 단지안내 */
 .two-col { 
   display: grid; 
   grid-template-columns: 1.1fr 1fr; 
-  gap: 20px; 
-  align-items: start;  
+  gap: 20px;  
+}
+
+/* 왼쪽 텍스트 카드 세로 가운데 정렬용 */
+.masterplan-text{
+  display: flex;
+  align-items: center;       /* 가로 기준 정렬 */
+  justify-content: center;   /* 세로 가운데 (핵심) */
 }
 
 .bullet-list { 
   font-size: 15px; 
   color: #4b5563; 
   padding-left: 16px;
-  margin: 0;              /* 핵심 */
+  margin: 0;
 }
 
 .bullet-list li { 
-  margin-bottom: 4px;     /* 여백 정리 */
+  margin-bottom: 4px;
 }
 
 @media (max-width: 900px) { 
-  .two-col { grid-template-columns: 1fr; } 
+  .two-col { 
+    grid-template-columns: 1fr; 
+  } 
 }
 
     /* 타입(건축이미지) */
@@ -599,6 +607,7 @@
 
 </body>
 </html>
+
 
 
 
