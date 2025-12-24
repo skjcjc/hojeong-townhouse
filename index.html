@@ -64,7 +64,23 @@
   .nav-menu a { font-size: 13px; color: #e5e7eb; padding: 4px 0; }
   
   /* 전화번호 버튼 위치 보정 */
-  .nav > div:last-child { margin-left: auto !important; }
+ /* 모바일에서 제목 + 전화번호 가운데 정렬 */
+.nav {
+  justify-content: center;   /* space-between 해제 */
+  text-align: center;
+}
+
+.nav-logo {
+  width: 100%;
+}
+
+.nav > div:last-child {
+  width: 100%;
+  justify-content: center;   /* 전화번호 flex 가운데 */
+  margin-left: 0 !important;
+  margin-top: 6px;           /* 제목과 간격 */
+}
+
 }
     /* 히어로 섹션 */
     .hero {
@@ -658,6 +674,7 @@
 
 </body>
 </html>
+
 
 
 
