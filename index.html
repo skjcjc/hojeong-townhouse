@@ -38,7 +38,48 @@
       background: linear-gradient(to right, #f97316, #facc15);
       color: #111827; font-weight: 600;
     }
- @media (max-width: 768px) { .nav-menu { display: none; } }
+/* (선택) 클릭 시 부드럽게 이동 */
+html { scroll-behavior: smooth; }
+
+/* 상단 sticky 헤더에 가려지지 않게 */
+section { scroll-margin-top: 110px; }
+
+/* 모바일 헤더 2줄 구성: 1줄(로고/전화) + 2줄(메뉴) */
+@media (max-width: 768px) {
+  .nav{
+    height: auto;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .nav-logo{
+    flex: 1 1 auto;
+    font-size: 20px;
+  }
+
+  .nav-phone{
+    margin-left: auto;
+  }
+
+  .nav-menu{
+    display: flex;            /* 모바일에서도 보이게 */
+    width: 100%;              /* 2번째 줄로 */
+    order: 3;
+    gap: 14px;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow-x: auto;         /* 메뉴 많으면 가로 스크롤 */
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+  }
+
+  .nav-menu a{
+    opacity: 0.9;
+    padding: 6px 0;
+  }
+}
+
     /* 히어로 섹션 */
     .hero {
       position: relative;
@@ -631,6 +672,7 @@
 
 </body>
 </html>
+
 
 
 
