@@ -41,7 +41,7 @@
     /* 전화영역(클래스화) */
     .nav-phone { display: flex; align-items: center; gap: 8px; margin-left: 50px; }
 
-    /* 모바일 헤더: 제목/전화 가운데 + 메뉴 2번째 줄 고정 표시 */
+/* 모바일 헤더: 제목/전화 가운데 + 메뉴 2번째 줄 고정 표시 */
     @media (max-width: 768px) {
       .nav {
         flex-wrap: wrap;
@@ -52,35 +52,54 @@
         gap: 6px;
       }
 
-      .nav-logo { width: 100%; font-size: 20px; }
-
-      .nav-phone {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-left: 0;            /* PC용 마진 제거 */
-        margin-top: 6px;
+      /* 1. 로고: 노란색, 굵게, 크게 */
+      .nav-logo { 
+        width: 100%; 
+        font-size: 24px; 
+        font-weight: 800;
+        color: #facc15;
       }
 
+      /* 2. 메뉴: 중간 위치, 한 줄로 표시(가로 스크롤) */
       .nav-menu {
         display: flex !important;
         width: 100%;
-        order: 3;                  /* 로고/전화 아래로 */
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
+        order: 2;                  /* 순서: 2번째 (로고 다음) */
+        
+        flex-wrap: nowrap;         /* 줄바꿈 절대 방지 */
+        overflow-x: auto;          /* 내용이 길면 가로 스크롤 */
+        white-space: nowrap;       /* 텍스트 줄바꿈 방지 */
+        justify-content: center;   /* 가운데 정렬 */
+        
         padding-top: 12px;
         margin-top: 8px;
         border-top: 1px solid rgba(255,255,255,0.15);
-        gap: 14px;
+        gap: 15px;
 
         /* 스크롤바 숨기기 */
+        -webkit-overflow-scrolling: touch;
         -ms-overflow-style: none;
         scrollbar-width: none;
       }
       .nav-menu::-webkit-scrollbar { display: none; }
+      
+      .nav-menu a { 
+        font-size: 13px; 
+        color: #e5e7eb; 
+        padding: 6px 0; 
+        opacity: 0.9; 
+        flex-shrink: 0;            /* 공간이 좁아도 글자 찌그러짐 방지 */
+      }
 
-      .nav-menu a { font-size: 13px; color: #e5e7eb; padding: 6px 0; opacity: 0.9; }
+      /* 3. 전화번호: 맨 아래 위치 */
+      .nav-phone {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-left: 0;            
+        margin-top: 10px;
+        order: 3;                  /* 순서: 3번째 (메뉴 다음) */
+      }
     }
 
     /* 히어로 섹션 */
@@ -654,6 +673,7 @@
 
 </body>
 </html>
+
 
 
 
