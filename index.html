@@ -46,30 +46,28 @@
     /* 전화영역 */
     .nav-phone { display: flex; align-items: center; gap: 10px; margin-left: 50px; }
 
-  @media (min-width: 769px) {
-      /* 헤더 전체: 세로 정렬(2줄) 및 여백 확보 */
+ @media (min-width: 769px) {
+      /* 헤더 높이 자동 조절: 위아래 여백(padding)을 25px->10px로 줄여서 배경을 날씬하게 만듦 */
       .nav { 
         display: flex; flex-direction: column; justify-content: center; align-items: center;
-        height: auto !important; padding: 25px 0 30px; position: relative;
+        height: auto !important; padding: 10px 0 15px; position: relative;
       }
-      /* 1. 로고: 중앙 정렬, 아주 크게 */
+      /* 1. 로고: 마진(45px)은 유지해서 메뉴를 밑으로 밀어냄 */
       .nav-logo { 
-        width: 100%; text-align: center; font-size: 34px; font-weight: 800; margin-bottom: 24px; 
+        width: 100%; text-align: center; font-size: 34px; font-weight: 800; margin-bottom: 45px; 
       }
       /* 2. 메뉴: 중앙 정렬, 간격 넓게 */
       .nav-menu { 
         width: 100%; justify-content: center; gap: 50px; font-size: 19px; font-weight: 700; 
       }
-      /* 3. 전화번호: 우측 상단 고정 */
+      /* 3. 전화번호: 배경이 줄어들었으므로 위치(Top)를 살짝 위로 조정 (30px -> 15px) */
       .nav-phone { 
-        position: absolute; top: 30px; right: 0; margin: 0; 
+        position: absolute; top: 15px; right: 0; margin: 0; 
       }
       .nav-phone span { font-size: 28px !important; font-weight: 900; }
       
-      /* 헤더가 커졌으므로 본문 스크롤 위치 조정 */
       section { scroll-margin-top: 180px; }
     }
-
 /* 모바일 헤더: 제목/전화 가운데 + 메뉴 2번째 줄 고정 표시 */
     @media (max-width: 768px) {
       .nav {
@@ -702,6 +700,7 @@
 
 </body>
 </html>
+
 
 
 
