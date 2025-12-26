@@ -48,13 +48,13 @@
 
  @media (min-width: 769px) {
       /* 헤더 높이 자동 조절: 위아래 여백(padding)을 25px->10px로 줄여서 배경을 날씬하게 만듦 */
-      .nav { 
+     .nav { 
         display: flex; flex-direction: column; justify-content: center; align-items: center;
-        height: auto !important; padding: 10px 0 15px; position: relative;
+        height: auto !important; padding: 30px 0 5px; position: relative;
       }
-      /* 1. 로고: 마진(45px)은 유지해서 메뉴를 밑으로 밀어냄 */
+      /* [수정] 타이틀이 내려온 만큼, 메뉴와의 간격을 45px->25px로 줄여서 전체 배경이 커지지 않게 함 */
       .nav-logo { 
-      width: 100%; text-align: center; font-size: 34px; font-weight: 800; margin-bottom: 45px;
+        width: 100%; text-align: center; font-size: 34px; font-weight: 800; margin-bottom: 25px; 
       }
       /* 2. 메뉴: 중앙 정렬, 간격 넓게 */
       .nav-menu { 
@@ -700,6 +700,7 @@
 
 </body>
 </html>
+
 
 
 
