@@ -46,9 +46,28 @@
     /* 전화영역 */
     .nav-phone { display: flex; align-items: center; gap: 10px; margin-left: 50px; }
 
-    /* [중요] PC 화면에서만 전화번호 글자 강제로 키우기 (모바일 영향 없음) */
-    @media (min-width: 769px) {
-      .nav-phone span { font-size: 28px !important; }
+  @media (min-width: 769px) {
+      /* 헤더 전체: 세로 정렬(2줄) 및 여백 확보 */
+      .nav { 
+        display: flex; flex-direction: column; justify-content: center; align-items: center;
+        height: auto !important; padding: 25px 0 30px; position: relative;
+      }
+      /* 1. 로고: 중앙 정렬, 아주 크게 */
+      .nav-logo { 
+        width: 100%; text-align: center; font-size: 34px; font-weight: 800; margin-bottom: 24px; 
+      }
+      /* 2. 메뉴: 중앙 정렬, 간격 넓게 */
+      .nav-menu { 
+        width: 100%; justify-content: center; gap: 50px; font-size: 19px; font-weight: 700; 
+      }
+      /* 3. 전화번호: 우측 상단 고정 */
+      .nav-phone { 
+        position: absolute; top: 30px; right: 0; margin: 0; 
+      }
+      .nav-phone span { font-size: 28px !important; font-weight: 900; }
+      
+      /* 헤더가 커졌으므로 본문 스크롤 위치 조정 */
+      section { scroll-margin-top: 180px; }
     }
 
 /* 모바일 헤더: 제목/전화 가운데 + 메뉴 2번째 줄 고정 표시 */
@@ -683,6 +702,7 @@
 
 </body>
 </html>
+
 
 
 
